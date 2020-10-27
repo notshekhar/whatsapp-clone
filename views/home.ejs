@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Welcome <%= username %></title>
+        <link rel="stylesheet" href="./style.css" />
+        <script src="./js/socket.io.js"></script>
+        <script src="./js/zangodb.min.js"></script>
+        <script src="./js/db.js"></script>
+    </head>
+    <body>
+        <div class="left">
+            <div class="header">
+                <div class="user">HI, <%= username %></div>
+            </div>
+            <div class="body">
+                <div class="search">
+                    <input type="text" placeholder="Search chat" />
+                </div>
+                <div class="list"></div>
+            </div>
+            <div class="new_chat">
+                <div class="search">
+                    <input type="text" placeholder="Search in contact" />
+                </div>
+                <div class="list"></div>
+            </div>
+            <button class="addnewchat">Add New</button>
+        </div>
+        <div class="welcome_message">
+            <img src="./assets/welcome.png" alt="" />
+            <h1>Welcome <%=username %></h1>
+        </div>
+        <div class="message_body"></div>
+        <script src="./js/index.js"></script>
+    </body>
+</html>

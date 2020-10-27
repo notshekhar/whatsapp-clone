@@ -1,0 +1,117 @@
+:root {
+    --theme-color: tomato;
+    --bg-color-p: rgb(233, 233, 233);
+    --bg-color-s: white;
+    --shadow: 0 1px 3px 1px rgba(60, 64, 67, 0.15),
+        0 1px 2px 0 rgba(60, 64, 67, 0.3);
+    --color: black;
+    --left-width-d: 350px;
+    --left-width-m: 100%;
+}
+* {
+    transition: all 200ms;
+    font-family: sans-serif;
+}
+.left {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: var(--left-width-d);
+    height: 100%;
+    /* height: 20px; */
+    background: var(--bg-color-p);
+    box-shadow: var(--shadow);
+    z-index: 2;
+}
+.left .header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 60px;
+    background: var(--theme-color);
+    display: flex;
+    align-items: center;
+}
+.left .header .user {
+    padding-left: 20px;
+    color: var(--color);
+}
+.left .body {
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    width: 100%;
+    height: calc(100% - 60px);
+}
+.search {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search input {
+    width: 80%;
+    height: 30px;
+    outline: none;
+    border: none;
+    background-color: var(--bg-color-s);
+    border-radius: 300px;
+    /* box-shadow: var(--shadow); */
+    padding-left: 10px;
+    color: var(--color);
+}
+.list {
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    width: 100%;
+    height: calc(100% - 50px);
+    color: var(--color);
+    overflow-y: scroll;
+}
+.addnewchat {
+    position: fixed;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    left: calc(var(--left-width-d) - 20px - 50px);
+    background-color: var(--theme-color);
+    border: none;
+    transition: all 400ms;
+    outline: none;
+}
+.addnewchat:hover {
+    transform: scale(0.9);
+}
+.addnewchat:active {
+    color: var(--theme-color);
+    background-color: var(--color);
+}
+.new_chat {
+    display: block;
+    position: fixed;
+    top: 100%;
+    left: 0px;
+    width: var(--left-width-d);
+    height: calc(100% - 60px);
+    transition: all 400ms;
+}
+.welcome_message {
+    position: absolute;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: var(--left-width-d);
+    width: calc(100% - var(--left-width-d));
+    height: 100%;
+    background: var(--bg-color-s);
+    color: var(--color);
+}
