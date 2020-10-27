@@ -18,9 +18,9 @@ const recents = db.collection("recents")
 //     message,
 //     reply,
 // }
-recents = {
-    uid,
-}
+// recents = {
+//     uid,
+// }
 
 // onMessageSend if contacts have not user added then add new contact
 // if new message recieve then if contact not have user added then add new
