@@ -20,10 +20,12 @@ const recents = db.collection("recents")
 // }
 // recents = {
 //     uid,
+//     datetime
 // }
 
 // onMessageSend if contacts have not user added then add new contact
 // if new message recieve then if contact not have user added then add new
+
 // contacts.insert([
 //     {
 //         uid: "shekhar",
@@ -36,7 +38,7 @@ const recents = db.collection("recents")
 // ])
 
 // chats.insert({
-//     recipets: ["shekhar", "root"],
+//     recipets: ["shekhar"],
 //     method: "receive",
 //     message: "hello",
 //     reply: "hi",
